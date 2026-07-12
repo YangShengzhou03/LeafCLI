@@ -1,0 +1,14 @@
+node_modules/
+dist/
+!extension/dist/
+*.tsbuildinfo
+.leafcli/
+*.log
+
+# Extensions & Secrets
+*.pem
+*.crx
+*.zip
+
+# Database files
+*.db

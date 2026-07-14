@@ -14,7 +14,8 @@
 
 import { createServer, type IncomingMessage, type ServerResponse } from 'node:http';
 import { existsSync, readFileSync, writeFileSync, mkdirSync } from 'node:fs';
-import { join, homedir } from 'node:path';
+import { join } from 'node:path';
+import { homedir } from 'node:os';
 import { log } from './logger.js';
 import { EXIT_CODES } from './errors.js';
 import { PKG_VERSION } from './version.js';

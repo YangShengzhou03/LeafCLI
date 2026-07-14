@@ -191,7 +191,7 @@ Use the `Read` tool on the exact path from summary.md front matter.
 1. **Make minimal changes** — fix only what's broken, don't refactor
 2. **Keep the same output structure** — `columns` and return format must stay compatible
 3. **Prefer API over DOM scraping** — if you discover a JSON API during exploration, switch to it
-4. **Use `@jackwener/leafcli/*` imports only** — never add third-party package imports
+4. **Use `@yangshengzhou/leafcli/*` imports only** — never add third-party package imports
 5. **Test after patching** — run the command again to verify
 6. **Never relax `verify/<cmd>.json` fixtures to silence a failure.** A failing `patterns` / `notEmpty` / `mustNotContain` / `mustBeTruthy` rule means the adapter's output is broken. Tighten the adapter so it produces correct values; do not loosen the fixture to accept the broken values. The one legitimate reason to edit a fixture during repair is when the **site itself** changed shape (e.g. URL format migration) — in that case update the fixture and note the change in `~/.leafcli/sites/<site>/notes.md`. Otherwise editing the fixture is covering up a silent correctness regression.
 
@@ -206,7 +206,7 @@ If it still fails, go back to Step 1 and collect a fresh trace. You have a budge
 
 ## Step 6: File an Upstream Issue
 
-If the retry **passes**, the local adapter has drifted from upstream. File a GitHub issue so the fix flows back to `jackwener/LeafCLI`.
+If the retry **passes**, the local adapter has drifted from upstream. File a GitHub issue so the fix flows back to `Yangshengzhou03/LeafCLI`.
 
 **Do NOT file for:**
 - `AUTH_REQUIRED`, `BROWSER_CONNECT`, `ARGUMENT`, `CONFIG` — environment/usage issues, not adapter bugs
@@ -251,7 +251,7 @@ _Issue filed by LeafCLI autofix after a verified local repair._
 3. If the user approves and `gh auth status` succeeds:
 
 ```bash
-gh issue create --repo jackwener/LeafCLI \
+gh issue create --repo Yangshengzhou03/LeafCLI \
   --title "[autofix] <site>/<command>: <error_code>" \
   --body "<the body above>"
 ```
@@ -293,5 +293,5 @@ In all stop cases, clearly communicate the situation to the user rather than mak
 
 7. AI prepares upstream issue draft, shows it to the user
 
-8. User approves → AI runs: gh issue create --repo jackwener/LeafCLI --title "[autofix] zhihu/hot: SELECTOR" --body "..."
+8. User approves → AI runs: gh issue create --repo Yangshengzhou03/LeafCLI --title "[autofix] zhihu/hot: SELECTOR" --body "..."
 ```

@@ -5,8 +5,7 @@
 ### 方式1：使用安装引导程序
 
 **Windows 用户：**
-- 双击运行 `install-wizard.exe`（后期打包）
-- 或运行 `python install-wizard.py`
+- 运行 `python install.py`
 
 安装引导程序会自动：
 1. 检查 Node.js 环境
@@ -158,7 +157,7 @@ leafcli task-watcher status
 
 **A:** 检查：
 1. Claude Desktop 是否已安装并登录
-2. Skills 是否已安装：运行 `npx skills add YangShengzhou03/LeafCLI`
+2. Skills 是否已安装：运行 `npx skills add https://gitee.com/Yangshengzhou/leaf-cli.git --all --yes -g`
 3. 在 Claude 中说："帮我查看 leafcli 的使用方法"
 
 ### Q: 如何卸载？

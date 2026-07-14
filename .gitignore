@@ -12,3 +12,5 @@ dist/
 
 # Database files
 *.db
+
+__pycache__/

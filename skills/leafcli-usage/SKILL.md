@@ -19,11 +19,11 @@ LeafCLI turns any website, Electron desktop app, or external CLI into a uniform 
 
 ```bash
 # npm global
-npm install -g @jackwener/leafcli          # binary: leafcli, requires Node >= 21
+npm install -g @yangshengzhou/leafcli      # binary: leafcli, requires Node >= 20
 leafcli doctor                              # run before browser-dependent work (see below)
 
 # From source
-git clone git@github.com:jackwener/LeafCLI.git
+git clone https://gitee.com/Yangshengzhou/leaf-cli.git
 cd LeafCLI && npm install
 npx tsx src/main.ts <command>               # same surface, no global install
 ```
@@ -61,7 +61,7 @@ Before falling back to raw `leafcli browser` commands on high-change authenticat
 | flag | effect |
 |------|--------|
 | `-f, --format <fmt>` | `table` (default in TTY) · `yaml` (default in non-TTY) · `json` · `plain` · `md` · `csv`. Pass explicitly when you want a specific shape; agents almost always want `-f json`. |
-| `-v, --verbose` | Debug logs + stack traces on failure; also sets `OPENCLI_VERBOSE=1` for the process. |
+| `-v, --verbose` | Debug logs + stack traces on failure; also sets `leafcli_VERBOSE=1` for the process. |
 
 Command-specific flags (`--limit`, `--tab`, `--filter`, …) are not universal — consult `<site> <command> --help`.
 
@@ -79,12 +79,12 @@ A few commands override the default via `cmd.defaultFormat` (e.g. chat commands 
 
 | variable | default | purpose |
 |----------|---------|---------|
-| `OPENCLI_BROWSER_CONNECT_TIMEOUT` | `45` | Seconds to wait for the browser bridge. |
-| `OPENCLI_BROWSER_COMMAND_TIMEOUT` | `60` | Per-command timeout. |
-| `OPENCLI_CDP_ENDPOINT` | — | Manual CDP endpoint override (dev / remote Chrome / Electron). |
-| `OPENCLI_CACHE_DIR` | `~/.leafcli/cache` | Network capture + browser-state cache. |
-| `OPENCLI_WINDOW` | command-specific | `foreground` or `background` browser window mode. |
-| `OPENCLI_VERBOSE` | `false` | Verbose logging (also triggered by `-v`). |
+| `leafcli_BROWSER_CONNECT_TIMEOUT` | `45` | Seconds to wait for the browser bridge. |
+| `leafcli_BROWSER_COMMAND_TIMEOUT` | `60` | Per-command timeout. |
+| `leafcli_CDP_ENDPOINT` | — | Manual CDP endpoint override (dev / remote Chrome / Electron). |
+| `leafcli_CACHE_DIR` | `~/.leafcli/cache` | Network capture + browser-state cache. |
+| `leafcli_WINDOW` | command-specific | `foreground` or `background` browser window mode. |
+| `leafcli_VERBOSE` | `false` | Verbose logging (also triggered by `-v`). |
 
 ## Self-repair
 
@@ -106,7 +106,7 @@ leafcli verify [target] [--smoke]       # run the command with synthetic args
 leafcli browser verify <site>/<command> # end-to-end smoke inside the bridge
 ```
 
-Adapters import only `@jackwener/leafcli/registry` and `@jackwener/leafcli/errors`. `columns` must align 1:1 (in name and order) with keys of the object returned by `func`. For the full workflow see `leafcli-adapter-author`.
+Adapters import only `@yangshengzhou/leafcli/registry` and `@yangshengzhou/leafcli/errors`. `columns` must align 1:1 (in name and order) with keys of the object returned by `func`. For the full workflow see `leafcli-adapter-author`.
 
 ## Plugins
 

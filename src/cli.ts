@@ -34,6 +34,7 @@ import { buildExtractHtmlJs, runExtractFromHtml } from './browser/extract.js';
 import { analyzeSite, type PageSignals } from './browser/analyze.js';
 import { registerAuthCommands } from './commands/auth.js';
 import { daemonRestart, daemonStatus, daemonStop } from './commands/daemon.js';
+import { taskWatcherStart, taskWatcherStop, taskWatcherStatus, taskWatcherConfigAdd, taskWatcherConfigRemove, taskWatcherConfigList } from './commands/task-watcher.js';
 import { log } from './logger.js';
 import { bindTab, BrowserCommandError, sendCommand } from './browser/daemon-client.js';
 import { fetchDaemonStatus } from './browser/daemon-transport.js';
@@ -3404,8 +3405,6 @@ cli({
     .action(async () => { await daemonRestart(); });
 
   // ── Task Watcher ─────────────────────────────────────────────────────────
-  const { taskWatcherStart, taskWatcherStop, taskWatcherStatus, taskWatcherConfigAdd, taskWatcherConfigRemove, taskWatcherConfigList } = await import('./commands/task-watcher.js');
-
   const taskWatcherCmd = program.command('task-watcher').description('Monitor task pages and auto-trigger AI (投诉处理/工单处理)');
   const originalTaskWatcherDescription = taskWatcherCmd.description();
 

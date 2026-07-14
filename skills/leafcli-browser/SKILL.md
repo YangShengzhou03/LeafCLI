@@ -28,7 +28,7 @@ Until `doctor` is green, nothing else will work. Typical failures: Chrome not ru
 - Use a stable session name for any multi-command or human-paced browser workflow. Example: `leafcli browser fb-yaya-warmup open https://example.com`, then reuse `leafcli browser fb-yaya-warmup state`, `extract`, `click`, etc.
 - Owned browser sessions keep a tab lease alive between calls. Release it with `leafcli browser <session> close` or let the idle timeout expire.
 - `leafcli browser <session> bind` binds the Chrome tab you already have open to that session. Use this for logged-in pages, SSO flows, or pages you manually positioned before handing control to the agent.
-- `--window foreground|background` (or `OPENCLI_WINDOW=foreground|background`) chooses whether LeafCLI creates/focuses a foreground browser window or uses a background browser window for owned sessions.
+- `--window foreground|background` (or `leafcli_WINDOW=foreground|background`) chooses whether LeafCLI creates/focuses a foreground browser window or uses a background browser window for owned sessions.
 
 ### Bind Tab
 

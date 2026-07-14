@@ -3,7 +3,8 @@
  */
 
 import { existsSync, readFileSync, writeFileSync, mkdirSync } from 'node:fs';
-import { join, homedir } from 'node:path';
+import { join } from 'node:path';
+import { homedir } from 'node:os';
 
 export interface WatcherEntry {
   url: string;

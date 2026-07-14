@@ -22,6 +22,16 @@ interface TaskCheckResult {
   error?: string;
 }
 
+interface DomNode {
+  tagName?: string;
+  attributes?: Record<string, string>;
+  html?: string;
+  content?: string;
+  text?: string;
+  type?: string;
+  children?: DomNode[];
+}
+
 /**
  * 检查任务页面并提取任务信息
  */
@@ -146,11 +156,11 @@ function extractTasks(pageState: any, config: WatcherEntry): TaskInfo[] {
 /**
  * Find elements by CSS selector (simplified implementation)
  */
-function findElementsBySelector(dom: any, selector: string): any[] {
+function findElementsBySelector(dom: DomNode | string, selector: string): DomNode[] {
   // This is a simplified implementation
   // In production, use a proper DOM parser or leafcli's built-in find functionality
 
-  const elements: any[] = [];
+  const elements: DomNode[] = [];
 
   // Handle comma-separated selectors
   const selectors = selector.split(',').map(s => s.trim());
@@ -207,7 +217,7 @@ function traverseDomTree(node: any, selectors: string[], results: any[]): void {
 /**
  * Check if a node matches a CSS selector (simplified)
  */
-function matchesSelector(node: any, selector: string): boolean {
+function matchesSelector(node: DomNode, selector: string): boolean {
   if (!node || !node.attributes) return false;
 
   const classes = node.attributes.class || '';
@@ -232,7 +242,7 @@ function matchesSelector(node: any, selector: string): boolean {
 /**
  * Extract task info from a single element
  */
-function extractTaskFromElement(element: any, config: WatcherEntry): TaskInfo | null {
+function extractTaskFromElement(element: DomNode, config: WatcherEntry): TaskInfo | null {
   const task: TaskInfo = {
     id: '',
     title: '',
@@ -280,7 +290,7 @@ function extractTaskFromElement(element: any, config: WatcherEntry): TaskInfo | 
 /**
  * Get content from an element
  */
-function getElementContent(element: any): string {
+function getElementContent(element: DomNode | string): string {
   if (typeof element === 'string') {
     return element;
   }
@@ -352,7 +362,7 @@ function extractIdHeuristic(content: string): string {
     /(?:WO|TASK|TK|ID|#)-?(\d+)/i,
     /(?:工单|投诉|任务)[^\d]*(\d+)/i,
     /href="\/[^"]*\/(\d+)"[^>]*>/i,
-    /<[^>]*class="[^"]*(?:id|number|编号)[^"]*"[^>]*>(\d+)</[^>]*>/i,
+    /<[^>]*class="[^"]*(?:id|number|编号)[^"]*"[^>]*>(\d+)<\/[^>]*>/i,
   ];
 
   for (const pattern of patterns) {

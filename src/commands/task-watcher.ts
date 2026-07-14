@@ -8,7 +8,8 @@
 
 import { spawn } from 'node:child_process';
 import { fetch } from 'undici';
-import { join, homedir } from 'node:path';
+import { join } from 'node:path';
+import { homedir } from 'node:os';
 import { log } from '../logger.js';
 import { PKG_VERSION } from '../version.js';
 import {

@@ -12,8 +12,8 @@
 
 ```javascript
 // eastmoney convertible — on-market convertible bond listing.
-import { cli, Strategy } from '@jackwener/leafcli/registry';
-import { CliError } from '@jackwener/leafcli/errors';
+import { cli, Strategy } from '@yangshengzhou/leafcli/registry';
+import { CliError } from '@yangshengzhou/leafcli/errors';
 
 const SORTS = {
   change:   { fid: 'f3',   order: 'desc' },
@@ -118,12 +118,12 @@ columns: ['rank', 'bondCode', 'bondName', /* ... */ ],
 - `default` 必填（缺失的命令会拒绝启动）
 - `columns` 数组必须跟 `func` 返回的 object keys 完全对上，顺序也一致（决定表格列顺序）
 - 列名 camelCase，跟 `cli({...})` 其他 adapter 保持统一
-- **中间解析对象 key 不能跟 columns 任一项重叠** —— 否则 `silent-column-drop` audit 会把它当 row 候选误判。`{pid, html, start}` 这类中间结构改成 `{postId, body, offset}`，最后在 push row 时再 destructure aliasing 回 column 命名。背景：PR #1329 R1 codex-mini0 catch 的（[before](https://github.com/jackwener/LeafCLI/blob/384bcd6fdd93f3075bd2c835e82689c42bfe4b2f/clis/1point3acres/thread.js#L50-L63) → [after](../../../clis/1point3acres/thread.js#L50-L65)）
+- **中间解析对象 key 不能跟 columns 任一项重叠** —— 否则 `silent-column-drop` audit 会把它当 row 候选误判。`{pid, html, start}` 这类中间结构改成 `{postId, body, offset}`，最后在 push row 时再 destructure aliasing 回 column 命名。背景：PR #1329 R1 codex-mini0 catch 的（[before](https://github.com/Yangshengzhou03/LeafCLI/blob/384bcd6fdd93f3075bd2c835e82689c42bfe4b2f/clis/1point3acres/thread.js#L50-L63) → [after](../../../clis/1point3acres/thread.js#L50-L65)）
 
 ### 3. func — 主体
 
 ```javascript
-import { ArgumentError, CommandExecutionError, EmptyResultError } from '@jackwener/leafcli/errors';
+import { ArgumentError, CommandExecutionError, EmptyResultError } from '@yangshengzhou/leafcli/errors';
 
 func: async (args) => {
   // 1. 解析参数 — 越界一律抛，不要 silent clamp
@@ -180,8 +180,8 @@ PUBLIC 模式不够（接口 401 / 302 到 login / 响应是"请登录"页）就
 3. Declaration 加 `browser: true`；不需要真的打开目标页时 `navigateBefore: false`。
 
 ```javascript
-import { cli, Strategy } from '@jackwener/leafcli/registry';
-import { ArgumentError, AuthRequiredError, CommandExecutionError, EmptyResultError } from '@jackwener/leafcli/errors';
+import { cli, Strategy } from '@yangshengzhou/leafcli/registry';
+import { ArgumentError, AuthRequiredError, CommandExecutionError, EmptyResultError } from '@yangshengzhou/leafcli/errors';
 
 const BASE = 'https://www.example.com';
 const HOST = 'www.example.com';
@@ -350,7 +350,7 @@ for (const opts of [{ domain: HOST }, { domain: ROOT }]) { ... }
 历史上这里写的是"返回一行说明 row 比 `return []` 安全"。**这条已经反过来了**——见 PR #1329 R3 的 four anti-pattern fixes。现在的契约：
 
 ```javascript
-import { EmptyResultError } from '@jackwener/leafcli/errors';
+import { EmptyResultError } from '@yangshengzhou/leafcli/errors';
 
 // ❌ 老写法：sentinel 行污染 row 合同，让 listing→detail round-trip 拿到 tid='' 白跑
 if (/暂时没有提醒内容/.test(html)) {

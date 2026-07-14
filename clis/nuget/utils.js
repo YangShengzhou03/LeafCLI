@@ -1,4 +1,4 @@
-﻿// Shared helpers for the NuGet adapters.
+// Shared helpers for the NuGet adapters.
 //
 // NuGet exposes two complementary endpoints:
 //   • `azuresearch-usnc.nuget.org/query` — full-text package search (V3)
@@ -8,7 +8,7 @@ import { ArgumentError, CommandExecutionError, EmptyResultError } from '@yangshe
 
 export const NUGET_SEARCH_BASE = 'https://azuresearch-usnc.nuget.org';
 export const NUGET_REGISTRATION_BASE = 'https://api.nuget.org/v3/registration5-semver1';
-const UA = 'leafcli-nuget-adapter/1.0 (+https://github.com/yangshengzhou/leafcli; mailto:leafcli@example.com)';
+const UA = 'leafcli-nuget-adapter/1.0 (+https://github.com/YangShengzhou03/LeafCLI; mailto:leafcli@example.com)';
 
 // NuGet ID grammar (NuGet docs §package-id): up to 100 chars, alnum + `.` + `_` + `-`,
 // must start with letter/digit. Case-insensitive; we lowercase for the registration URL

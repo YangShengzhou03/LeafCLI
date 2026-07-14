@@ -1,4 +1,4 @@
-﻿// hf models — list top Hugging Face models (by downloads / likes / trending).
+// hf models — list top Hugging Face models (by downloads / likes / trending).
 import { cli, Strategy } from '@yangshengzhou/leafcli/registry';
 import {
     ArgumentError,
@@ -51,7 +51,7 @@ cli({
             resp = await fetch(url, {
                 headers: {
                     'Accept': 'application/json',
-                    'User-Agent': 'leafcli/1.0 (+https://github.com/yangshengzhou/leafcli)',
+                    'User-Agent': 'leafcli/1.0 (+https://github.com/YangShengzhou03/LeafCLI)',
                 },
             });
         } catch (error) {

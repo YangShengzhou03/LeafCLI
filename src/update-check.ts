@@ -1,4 +1,4 @@
-﻿/**
+/**
  * Non-blocking update checker.
  *
  * Pattern: register exit-hook + kick-off-background-fetch
@@ -115,7 +115,7 @@ function buildUpdateNotices({ cliVersion, cache, now }: NoticeInputs): NoticeLin
   ) {
     lines.extension =
       `\n  Extension update available: v${currentExtensionVersion} → v${latestExtensionVersion}\n` +
-      `  Download: https://github.com/yangshengzhou/leafcli/releases\n`;
+      `  Download: https://github.com/YangShengzhou03/LeafCLI/releases\n`;
   }
   return lines;
 }

@@ -1,4 +1,4 @@
-﻿// Shared helpers for the Wikidata adapters.
+// Shared helpers for the Wikidata adapters.
 //
 // Wikidata exposes two complementary public endpoints:
 //   • `wbsearchentities` on `www.wikidata.org/w/api.php` for keyword → Q-IDs
@@ -7,7 +7,7 @@
 import { ArgumentError, CommandExecutionError, EmptyResultError } from '@yangshengzhou/leafcli/errors';
 
 export const WIKIDATA_BASE = 'https://www.wikidata.org';
-const UA = 'leafcli-wikidata-adapter/1.0 (+https://github.com/yangshengzhou/leafcli; mailto:leafcli@example.com)';
+const UA = 'leafcli-wikidata-adapter/1.0 (+https://github.com/YangShengzhou03/LeafCLI; mailto:leafcli@example.com)';
 
 // Q-ID = an item; P-ID = a property; L-ID = a lexeme. We accept all three so the
 // adapter can be reused for properties / lexemes without a separate command, but

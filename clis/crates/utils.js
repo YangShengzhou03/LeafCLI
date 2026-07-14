@@ -1,8 +1,8 @@
-﻿// Shared helpers for the crates.io adapters.
+// Shared helpers for the crates.io adapters.
 import { ArgumentError, CommandExecutionError, EmptyResultError } from '@yangshengzhou/leafcli/errors';
 
 export const CRATES_BASE = 'https://crates.io';
-const UA = 'leafcli-crates-adapter (+https://github.com/yangshengzhou/leafcli)';
+const UA = 'leafcli-crates-adapter (+https://github.com/YangShengzhou03/LeafCLI)';
 
 // crates.io crate names: 1-64 chars, ascii letters/digits/-_, must start with a letter.
 const CRATE_NAME = /^[A-Za-z][A-Za-z0-9_-]{0,63}$/;

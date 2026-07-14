@@ -1,8 +1,8 @@
-﻿// Shared helpers for the bbc adapters that hit BBC's public RSS feeds.
+// Shared helpers for the bbc adapters that hit BBC's public RSS feeds.
 import { ArgumentError, CommandExecutionError } from '@yangshengzhou/leafcli/errors';
 
 export const BBC_FEED_BASE = 'https://feeds.bbci.co.uk/news';
-const UA = 'leafcli-bbc-adapter (+https://github.com/yangshengzhou/leafcli)';
+const UA = 'leafcli-bbc-adapter (+https://github.com/YangShengzhou03/LeafCLI)';
 
 const HTML_ENTITIES = {
     '&amp;': '&', '&lt;': '<', '&gt;': '>', '&quot;': '"', '&apos;': "'", '&#39;': "'", '&nbsp;': ' ',

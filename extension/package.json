@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "private": true,
   "leafcli": {
-    "compatRange": ">=1.7.0"
+    "compatRange": ">=1.0.0"
   },
   "type": "module",
   "scripts": {

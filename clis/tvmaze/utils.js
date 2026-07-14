@@ -1,11 +1,11 @@
-﻿// Shared helpers for the TVmaze adapters.
+// Shared helpers for the TVmaze adapters.
 //
 // TVmaze publishes a free, unauthenticated REST API at https://api.tvmaze.com.
 // Docs: https://www.tvmaze.com/api
 import { ArgumentError, CommandExecutionError, EmptyResultError } from '@yangshengzhou/leafcli/errors';
 
 export const TVMAZE_BASE = 'https://api.tvmaze.com';
-const UA = 'leafcli-tvmaze-adapter (+https://github.com/yangshengzhou/leafcli)';
+const UA = 'leafcli-tvmaze-adapter (+https://github.com/YangShengzhou03/LeafCLI)';
 
 export function requireString(value, label) {
     const s = String(value ?? '').trim();

@@ -1,4 +1,4 @@
-﻿/**
+/**
  * leafcli doctor — diagnose browser connectivity.
  *
  * Simplified for the daemon-based architecture.
@@ -155,7 +155,7 @@ export async function runBrowserDoctor(opts: DoctorOptions = {}): Promise<Doctor
         'Daemon is running but the Chrome/Chromium extension is not connected.\n' +
         'If the extension is already installed, try: leafcli daemon restart\n' +
         'If the extension is not installed:\n' +
-        '  1. Download from https://github.com/yangshengzhou/leafcli/releases\n' +
+        '  1. Download from https://github.com/YangShengzhou03/LeafCLI/releases\n' +
         '  2. Open chrome://extensions/ → Enable Developer Mode\n' +
         '  3. Click "Load unpacked" → select the extension folder',
       );
@@ -165,7 +165,7 @@ export async function runBrowserDoctor(opts: DoctorOptions = {}): Promise<Doctor
     issues.push(
       'Extension is connected but did not report a version.\n' +
       '  This usually means an outdated Browser Bridge extension.\n' +
-      '  Reload or reinstall the extension from: https://github.com/yangshengzhou/leafcli/releases',
+      '  Reload or reinstall the extension from: https://github.com/YangShengzhou03/LeafCLI/releases',
     );
   }
   if (!connectivity.ok) {
@@ -195,7 +195,7 @@ export async function runBrowserDoctor(opts: DoctorOptions = {}): Promise<Doctor
       issues.push(
         `CLI version incompatible with extension: extension v${extensionVersion} requires CLI ${extensionCompatRange}, but CLI is v${opts.cliVersion}\n` +
         '  Update the CLI: npm install -g @yangshengzhou/leafcli\n' +
-        '  Or download a compatible extension from: https://github.com/yangshengzhou/leafcli/releases',
+        '  Or download a compatible extension from: https://github.com/YangShengzhou03/LeafCLI/releases',
       );
     }
   } else if (extensionVersion && opts.cliVersion) {
@@ -205,7 +205,7 @@ export async function runBrowserDoctor(opts: DoctorOptions = {}): Promise<Doctor
     if (extMajor !== cliMajor) {
       issues.push(
         `Extension major version mismatch: extension v${extensionVersion} ≠ CLI v${opts.cliVersion}\n` +
-        '  Download the latest extension from: https://github.com/yangshengzhou/leafcli/releases',
+        '  Download the latest extension from: https://github.com/YangShengzhou03/LeafCLI/releases',
       );
     }
   }
@@ -215,7 +215,7 @@ export async function runBrowserDoctor(opts: DoctorOptions = {}): Promise<Doctor
   if (extensionVersion && latestExtensionVersion && isNewerVersion(latestExtensionVersion, extensionVersion)) {
     issues.push(
       `Extension update available: v${extensionVersion} → v${latestExtensionVersion}\n` +
-      '  Download from: https://github.com/yangshengzhou/leafcli/releases',
+      '  Download from: https://github.com/YangShengzhou03/LeafCLI/releases',
     );
   }
   if (adapterShadows.length > 0) {

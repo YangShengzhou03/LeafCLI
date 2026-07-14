@@ -1,4 +1,4 @@
-﻿// medium tag — Medium articles for a tag, newest first, via the public
+// medium tag — Medium articles for a tag, newest first, via the public
 // RSS feed at `https://medium.com/feed/tag/<tag>`.
 //
 // Complements existing `medium feed` (per-publication / per-user) and
@@ -95,7 +95,7 @@ cli({
         try {
             resp = await fetch(url, {
                 headers: {
-                    'user-agent': 'leafcli-medium-adapter (+https://github.com/yangshengzhou/leafcli)',
+                    'user-agent': 'leafcli-medium-adapter (+https://github.com/YangShengzhou03/LeafCLI)',
                     accept: 'application/rss+xml, application/xml',
                 },
             });

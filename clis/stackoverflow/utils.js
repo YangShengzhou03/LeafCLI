@@ -1,4 +1,4 @@
-﻿// Shared helpers for stackoverflow adapters using the Stack Exchange API.
+// Shared helpers for stackoverflow adapters using the Stack Exchange API.
 //
 // Public endpoint (api.stackexchange.com 2.3) accepts unauthenticated traffic
 // up to 300 requests/day per IP for read endpoints, plenty for ad-hoc CLI use.
@@ -13,7 +13,7 @@ import {
 export const SE_API = 'https://api.stackexchange.com/2.3';
 export const SE_SITE = 'stackoverflow';
 
-const UA = 'leafcli-stackoverflow (+https://github.com/yangshengzhou/leafcli)';
+const UA = 'leafcli-stackoverflow (+https://github.com/YangShengzhou03/LeafCLI)';
 
 /** Validate `limit` per typed-fail-fast convention (no silent clamp). */
 export function normalizeLimit(value, defaultValue, maxValue, label = 'limit') {

@@ -1,4 +1,4 @@
-﻿// wikipedia page — full article extract (plain text) with optional paragraph cap.
+// wikipedia page — full article extract (plain text) with optional paragraph cap.
 //
 // Unlike `wikipedia summary` which returns the lead-section blurb truncated to
 // 300 chars, this adapter returns the *complete* article body (or the first N
@@ -52,7 +52,7 @@ cli({
         try {
             resp = await fetch(url, {
                 headers: {
-                    'User-Agent': 'leafcli/1.0 (+https://github.com/yangshengzhou/leafcli)',
+                    'User-Agent': 'leafcli/1.0 (+https://github.com/YangShengzhou03/LeafCLI)',
                     'Accept': 'application/json',
                 },
             });

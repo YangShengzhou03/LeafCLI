@@ -1,4 +1,4 @@
-﻿// Shared helpers for the Docker Hub adapters.
+// Shared helpers for the Docker Hub adapters.
 //
 // Hits the public, unauthenticated `hub.docker.com/v2` REST endpoints. Anonymous
 // pulls are throttled but search / metadata reads are friendly enough for
@@ -7,7 +7,7 @@
 import { ArgumentError, CommandExecutionError, EmptyResultError } from '@yangshengzhou/leafcli/errors';
 
 export const HUB_BASE = 'https://hub.docker.com/v2';
-const UA = 'leafcli-dockerhub-adapter (+https://github.com/yangshengzhou/leafcli)';
+const UA = 'leafcli-dockerhub-adapter (+https://github.com/YangShengzhou03/LeafCLI)';
 
 // Docker Hub repository slugs are 2-255 chars, lowercase alphanumerics + `_.-`,
 // optionally prefixed with a Docker Hub user/org of the same charset.

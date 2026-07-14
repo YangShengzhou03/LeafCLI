@@ -1,4 +1,4 @@
-﻿// lobsters domain — list Lobste.rs stories submitted from a specific domain.
+// lobsters domain — list Lobste.rs stories submitted from a specific domain.
 //
 // Hits the public `https://lobste.rs/domains/<domain>.json` endpoint
 // (returns the same per-story shape used by `lobsters tag` / `lobsters
@@ -51,7 +51,7 @@ cli({
         const url = `https://lobste.rs/domains/${encodeURIComponent(domain)}.json`;
         let resp;
         try {
-            resp = await fetch(url, { headers: { 'user-agent': 'leafcli-lobsters-adapter (+https://github.com/yangshengzhou/leafcli)' } });
+            resp = await fetch(url, { headers: { 'user-agent': 'leafcli-lobsters-adapter (+https://github.com/YangShengzhou03/LeafCLI)' } });
         }
         catch (err) {
             throw new CommandExecutionError(

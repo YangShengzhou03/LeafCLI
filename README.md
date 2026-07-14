@@ -1,8 +1,6 @@
 # LeafCLI
 
-[![npm version](https://img.shields.io/npm/v/@yangshengzhou/leafcli?style=flat-square&logo=npm)](https://www.npmjs.com/package/@yangshengzhou/leafcli)
-[![Node.js Version](https://img.shields.io/node/v/@yangshengzhou/leafcli?style=flat-square&logo=node.js)](https://nodejs.org)
-[![GitHub stars](https://img.shields.io/github/stars/YangShengzhou03/LeafCLI?style=flat-square&logo=github)](https://github.com/YangShengzhou03/LeafCLI/stargazers)
+[![npm version](https://img.shields.io/npm/v/@yangshengzhou/leafcli?style=flat-square&logo=npm)](https://www.npmjs.com/package/@yangshengzhou/leafcli) [![Node.js Version](https://img.shields.io/node/v/@yangshengzhou/leafcli?style=flat-square&logo=node.js)](https://nodejs.org) [![GitHub stars](https://img.shields.io/github/stars/YangShengzhou03/LeafCLI?style=flat-square&logo=github)](https://github.com/YangShengzhou03/LeafCLI/stargazers)
 
 **让 AI 帮你操作浏览器，一句话搞定重复操作。**
 
@@ -63,7 +61,9 @@ LeafCLI 就是来解决这个问题的。
 
 ### 方式一：自动安装（推荐）
 
-运行安装脚本，自动配置所有环境：
+**Windows 用户**直接下载 `leafcli-install.exe` 双击运行即可。
+
+也可以用 Python 运行安装脚本：
 
 ```powershell
 python install.py

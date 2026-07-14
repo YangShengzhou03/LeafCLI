@@ -1,4 +1,4 @@
-﻿// nvd cve — fetch a single CVE from the NIST National Vulnerability Database.
+// nvd cve — fetch a single CVE from the NIST National Vulnerability Database.
 //
 // Hits the CVE API 2.0 (`services.nvd.nist.gov/rest/json/cves/2.0?cveId=…`).
 // Returns the agent-useful projection: id, published / last-modified dates,
@@ -8,7 +8,7 @@ import { cli, Strategy } from '@yangshengzhou/leafcli/registry';
 import { ArgumentError, CommandExecutionError, EmptyResultError } from '@yangshengzhou/leafcli/errors';
 
 const NVD_BASE = 'https://services.nvd.nist.gov/rest/json/cves/2.0';
-const UA = 'leafcli-nvd-adapter (+https://github.com/yangshengzhou/leafcli)';
+const UA = 'leafcli-nvd-adapter (+https://github.com/YangShengzhou03/LeafCLI)';
 const CVE_ID = /^CVE-\d{4}-\d{4,}$/i;
 
 function requireCveId(value) {

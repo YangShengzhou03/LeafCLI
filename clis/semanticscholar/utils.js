@@ -1,4 +1,4 @@
-﻿// Shared helpers for the Semantic Scholar (`api.semanticscholar.org`) adapter.
+// Shared helpers for the Semantic Scholar (`api.semanticscholar.org`) adapter.
 //
 // Semantic Scholar exposes a free Academic Graph + a separate Recommendations
 // API. Anonymous traffic caps at roughly 100 requests / 5 minutes; an optional
@@ -11,7 +11,7 @@ import { ArgumentError, CommandExecutionError, EmptyResultError } from '@yangshe
 
 export const S2_GRAPH_BASE = 'https://api.semanticscholar.org/graph/v1';
 export const S2_REC_BASE = 'https://api.semanticscholar.org/recommendations/v1';
-const UA = 'leafcli-semanticscholar-adapter (+https://github.com/yangshengzhou/leafcli)';
+const UA = 'leafcli-semanticscholar-adapter (+https://github.com/YangShengzhou03/LeafCLI)';
 
 // Semantic Scholar paperId: 40-char lowercase hex (SHA-ish).
 const S2_PAPER_ID = /^[0-9a-f]{40}$/i;

@@ -1,4 +1,4 @@
-﻿// Shared helpers for the RubyGems.org adapters.
+// Shared helpers for the RubyGems.org adapters.
 //
 // Hits the public, unauthenticated `rubygems.org/api/v1` REST endpoints. No
 // auth required for read-only metadata; the API is friendly to anonymous CLI
@@ -7,7 +7,7 @@
 import { ArgumentError, CommandExecutionError, EmptyResultError } from '@yangshengzhou/leafcli/errors';
 
 export const GEMS_BASE = 'https://rubygems.org/api/v1';
-const UA = 'leafcli-rubygems-adapter (+https://github.com/yangshengzhou/leafcli)';
+const UA = 'leafcli-rubygems-adapter (+https://github.com/YangShengzhou03/LeafCLI)';
 
 // RubyGems gem name pattern (mirrors the rubygems-server validation).
 const GEM_NAME = /^[A-Za-z0-9][A-Za-z0-9._-]*$/;

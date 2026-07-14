@@ -1,4 +1,4 @@
-﻿// mdn search — search MDN Web Docs.
+// mdn search — search MDN Web Docs.
 //
 // Hits `https://developer.mozilla.org/api/v1/search?q=…&locale=…`. Returns a
 // row per matched doc with title, slug-derived id, summary preview, and the
@@ -7,7 +7,7 @@ import { cli, Strategy } from '@yangshengzhou/leafcli/registry';
 import { ArgumentError, CommandExecutionError, EmptyResultError } from '@yangshengzhou/leafcli/errors';
 
 const MDN_BASE = 'https://developer.mozilla.org';
-const UA = 'leafcli-mdn-adapter (+https://github.com/yangshengzhou/leafcli)';
+const UA = 'leafcli-mdn-adapter (+https://github.com/YangShengzhou03/LeafCLI)';
 const ALLOWED_LOCALES = new Set(['en-US', 'de', 'es', 'fr', 'ja', 'ko', 'pt-BR', 'ru', 'zh-CN', 'zh-TW']);
 
 function requireString(value, label) {

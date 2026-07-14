@@ -1,4 +1,4 @@
-﻿// Shared helpers for the Juejin (`api.juejin.cn`) adapter.
+// Shared helpers for the Juejin (`api.juejin.cn`) adapter.
 //
 // Juejin is a Chinese developer community (similar to Dev.to). The public
 // REST API is unauthenticated; all read endpoints are reachable without a
@@ -8,7 +8,7 @@ import { ArgumentError, CommandExecutionError, EmptyResultError } from '@yangshe
 export const JUEJIN_API_BASE = 'https://api.juejin.cn';
 export const JUEJIN_POST_URL = 'https://juejin.cn/post';
 export const JUEJIN_USER_URL = 'https://juejin.cn/user';
-const UA = 'leafcli-juejin-adapter (+https://github.com/yangshengzhou/leafcli)';
+const UA = 'leafcli-juejin-adapter (+https://github.com/YangShengzhou03/LeafCLI)';
 
 // Juejin content / article IDs are 19-digit numeric strings.
 const JUEJIN_ID = /^\d{16,20}$/;

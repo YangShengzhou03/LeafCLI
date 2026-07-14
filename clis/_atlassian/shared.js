@@ -1,4 +1,4 @@
-﻿import { readFile, stat } from 'node:fs/promises';
+import { readFile, stat } from 'node:fs/promises';
 import { htmlToMarkdown as coreHtmlToMarkdown } from '@yangshengzhou/leafcli/utils';
 import {
     ArgumentError,
@@ -8,7 +8,7 @@ import {
     EmptyResultError,
 } from '@yangshengzhou/leafcli/errors';
 
-const USER_AGENT = 'leafcli-atlassian-adapter (+https://github.com/yangshengzhou/leafcli)';
+const USER_AGENT = 'leafcli-atlassian-adapter (+https://github.com/YangShengzhou03/LeafCLI)';
 const DEPLOYMENTS = new Set(['cloud', 'datacenter', 'auto']);
 
 function firstEnv(names) {

@@ -1,4 +1,4 @@
-﻿// Shared helpers for the OpenAlex (`api.openalex.org`) adapter.
+// Shared helpers for the OpenAlex (`api.openalex.org`) adapter.
 //
 // OpenAlex is a free, open scholarly works database. The REST API is
 // unauthenticated; passing an email via `mailto=` opts into the polite pool
@@ -8,7 +8,7 @@
 import { ArgumentError, CommandExecutionError, EmptyResultError } from '@yangshengzhou/leafcli/errors';
 
 export const OPENALEX_BASE = 'https://api.openalex.org';
-const UA = 'leafcli-openalex-adapter (+https://github.com/yangshengzhou/leafcli)';
+const UA = 'leafcli-openalex-adapter (+https://github.com/YangShengzhou03/LeafCLI)';
 
 // OpenAlex stable IDs: a single-letter prefix (`W` works, `A` authors, `S`
 // sources, `I` institutions…) + at least 4 digits. We accept just `W` here.

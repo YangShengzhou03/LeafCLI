@@ -1,4 +1,4 @@
-﻿import { spawn, type ChildProcess } from 'node:child_process';
+import { spawn, type ChildProcess } from 'node:child_process';
 import { fileURLToPath } from 'node:url';
 import * as fs from 'node:fs';
 import * as path from 'node:path';
@@ -185,7 +185,7 @@ function browserConnectErrorFromHealth(health: DaemonHealth, contextId?: string)
       'Browser Bridge extension not connected',
       'Make sure Chrome/Chromium is open and the leafcli extension is enabled.\n' +
       'If not installed:\n' +
-      '  1. Download: https://github.com/yangshengzhou/leafcli/releases\n' +
+      '  1. Download: https://github.com/YangShengzhou03/LeafCLI/releases\n' +
       '  2. Open chrome://extensions → Developer Mode → Load unpacked',
       'extension-not-connected',
     );

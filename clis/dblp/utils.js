@@ -1,4 +1,4 @@
-﻿/**
+/**
  * DBLP adapter utilities.
  *
  * dblp serves a public, unauthenticated API:
@@ -33,7 +33,7 @@ async function dblpFetch(url, label, accept) {
         res = await fetch(url, {
             headers: {
                 accept,
-                'user-agent': 'leafcli-dblp/1.0 (+https://github.com/yangshengzhou/leafcli)',
+                'user-agent': 'leafcli-dblp/1.0 (+https://github.com/YangShengzhou03/LeafCLI)',
             },
         });
     }

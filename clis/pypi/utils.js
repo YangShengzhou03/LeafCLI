@@ -1,10 +1,10 @@
-﻿// Shared helpers for the pypi adapters that hit the PyPI public JSON API
+// Shared helpers for the pypi adapters that hit the PyPI public JSON API
 // (pypi.org/pypi/<pkg>/json) and pypistats.org for download stats.
 import { ArgumentError, CommandExecutionError, EmptyResultError } from '@yangshengzhou/leafcli/errors';
 
 export const PYPI_BASE = 'https://pypi.org';
 export const PYPISTATS_BASE = 'https://pypistats.org';
-const UA = 'leafcli-pypi-adapter (+https://github.com/yangshengzhou/leafcli)';
+const UA = 'leafcli-pypi-adapter (+https://github.com/YangShengzhou03/LeafCLI)';
 
 // PEP 508 / PEP 426 normalized name: letters, digits, "._-", with leading-letter rule relaxed by PyPI.
 const PKG_NAME = /^[A-Za-z0-9]([A-Za-z0-9._-]*[A-Za-z0-9])?$/;

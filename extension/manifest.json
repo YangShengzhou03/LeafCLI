@@ -1,4 +1,4 @@
-﻿{
+{
   "manifest_version": 3,
   "name": "leafcli",
   "version": "1.0.0",
@@ -37,5 +37,5 @@
   "content_security_policy": {
     "extension_pages": "script-src 'self'; object-src 'self'"
   },
-  "homepage_url": "https://github.com/yangshengzhou/leafcli"
+  "homepage_url": "https://github.com/YangShengzhou03/LeafCLI"
 }

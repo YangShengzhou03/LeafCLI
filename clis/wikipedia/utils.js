@@ -1,4 +1,4 @@
-﻿/**
+/**
  * Wikipedia adapter utilities.
  *
  * Uses the public MediaWiki REST API and Action API — no key required.
@@ -13,7 +13,7 @@ export const DESC_MAX_LEN = 80;
 export async function wikiFetch(lang, path) {
     const url = `https://${lang}.wikipedia.org${path}`;
     const resp = await fetch(url, {
-        headers: { 'User-Agent': 'leafcli/1.0 (https://github.com/yangshengzhou/leafcli)' },
+        headers: { 'User-Agent': 'leafcli/1.0 (https://github.com/YangShengzhou03/LeafCLI)' },
     });
     if (!resp.ok) {
         throw new CliError('FETCH_ERROR', `Wikipedia API HTTP ${resp.status}`, `Check your title or search term`);

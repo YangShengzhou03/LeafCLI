@@ -1,4 +1,4 @@
-﻿// Shared helpers for the Go module proxy adapters.
+// Shared helpers for the Go module proxy adapters.
 //
 // proxy.golang.org is the canonical Go module proxy. It is unauthenticated
 // and serves the GOPROXY protocol (`@latest`, `@v/list`, `@v/<ver>.info|mod|zip`).
@@ -6,7 +6,7 @@
 import { ArgumentError, CommandExecutionError, EmptyResultError } from '@yangshengzhou/leafcli/errors';
 
 export const GOPROXY_BASE = 'https://proxy.golang.org';
-const UA = 'leafcli-goproxy-adapter (+https://github.com/yangshengzhou/leafcli)';
+const UA = 'leafcli-goproxy-adapter (+https://github.com/YangShengzhou03/LeafCLI)';
 
 // Module paths look like host/path/...; conservative shape: at least one slash,
 // host segment is alnum + dots, path segments are alnum + dashes/dots/underscores/slashes.

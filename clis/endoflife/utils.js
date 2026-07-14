@@ -1,11 +1,11 @@
-﻿// Shared helpers for the endoflife.date adapters.
+// Shared helpers for the endoflife.date adapters.
 //
 // endoflife.date publishes a free, unauthenticated REST API with cycle / EOL /
 // LTS data for hundreds of products. Docs: https://endoflife.date/docs/api/
 import { ArgumentError, CommandExecutionError, EmptyResultError } from '@yangshengzhou/leafcli/errors';
 
 export const EOL_BASE = 'https://endoflife.date/api';
-const UA = 'leafcli-endoflife-adapter (+https://github.com/yangshengzhou/leafcli)';
+const UA = 'leafcli-endoflife-adapter (+https://github.com/YangShengzhou03/LeafCLI)';
 
 // endoflife.date product slugs are lowercase ascii + digits + dashes / dots, up to 80 chars.
 const PRODUCT = /^[a-z0-9][a-z0-9._-]{0,79}$/;

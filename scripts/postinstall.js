@@ -204,7 +204,7 @@ function main() {
     // ── Browser Bridge setup hint ───────────────────────────────────────
     console.log('  Next step — Browser Bridge setup');
     console.log('  Browser commands (bilibili, zhihu, twitter...) require the extension:');
-    console.log('  1. Download: https://github.com/yangshengzhou/leafcli/releases');
+    console.log('  1. Download: https://github.com/YangShengzhou03/LeafCLI/releases');
     console.log('  2. In Chrome or Chromium, open chrome://extensions → enable Developer Mode → Load unpacked');
     console.log('');
     console.log('  Then run leafcli doctor to verify.');

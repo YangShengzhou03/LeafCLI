@@ -1,11 +1,11 @@
-﻿// Shared helpers for the OEIS adapter (Online Encyclopedia of Integer Sequences).
+// Shared helpers for the OEIS adapter (Online Encyclopedia of Integer Sequences).
 //
 // OEIS exposes a single search endpoint that handles both keyword search and
 // id lookup via `q=id:Annnnnn`. JSON output via `fmt=json`. No API key.
 import { ArgumentError, CommandExecutionError, EmptyResultError } from '@yangshengzhou/leafcli/errors';
 
 export const OEIS_BASE = 'https://oeis.org';
-const UA = 'leafcli-oeis-adapter/1.0 (+https://github.com/yangshengzhou/leafcli; mailto:leafcli@example.com)';
+const UA = 'leafcli-oeis-adapter/1.0 (+https://github.com/YangShengzhou03/LeafCLI; mailto:leafcli@example.com)';
 
 // OEIS ids are A followed by 6 zero-padded digits (older entries use 6 by convention,
 // modern entries can be longer; OEIS itself accepts any digits after A).

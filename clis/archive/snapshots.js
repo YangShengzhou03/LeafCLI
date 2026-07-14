@@ -1,4 +1,4 @@
-﻿// archive snapshots: Wayback Machine CDX history for a URL.
+// archive snapshots: Wayback Machine CDX history for a URL.
 import { cli, Strategy } from '@yangshengzhou/leafcli/registry';
 import {
     ArgumentError,
@@ -69,7 +69,7 @@ cli({
             resp = await fetch(apiUrl, {
                 headers: {
                     'Accept': 'application/json',
-                    'User-Agent': 'leafcli/1.0 (+https://github.com/yangshengzhou/leafcli)',
+                    'User-Agent': 'leafcli/1.0 (+https://github.com/YangShengzhou03/LeafCLI)',
                 },
             });
         } catch (error) {

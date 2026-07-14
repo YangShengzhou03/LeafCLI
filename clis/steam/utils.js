@@ -1,9 +1,9 @@
-﻿// Shared helpers for the steam adapters that hit Steam's storefront JSON
+// Shared helpers for the steam adapters that hit Steam's storefront JSON
 // endpoints (no browser).
 import { ArgumentError, CommandExecutionError, EmptyResultError } from '@yangshengzhou/leafcli/errors';
 
 export const STEAM_STORE = 'https://store.steampowered.com';
-const UA = 'leafcli-steam-adapter (+https://github.com/yangshengzhou/leafcli)';
+const UA = 'leafcli-steam-adapter (+https://github.com/YangShengzhou03/LeafCLI)';
 
 export function requireString(value, label) {
     const s = String(value ?? '').trim();

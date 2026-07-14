@@ -1,11 +1,11 @@
-﻿// Shared helpers for the OSV.dev (Open Source Vulnerabilities) adapters.
+// Shared helpers for the OSV.dev (Open Source Vulnerabilities) adapters.
 //
 // OSV.dev publishes a free, unauthenticated REST API at https://api.osv.dev.
 // Docs: https://google.github.io/osv.dev/api/
 import { ArgumentError, CommandExecutionError, EmptyResultError } from '@yangshengzhou/leafcli/errors';
 
 export const OSV_BASE = 'https://api.osv.dev';
-const UA = 'leafcli-osv-adapter (+https://github.com/yangshengzhou/leafcli)';
+const UA = 'leafcli-osv-adapter (+https://github.com/YangShengzhou03/LeafCLI)';
 
 // OSV vulnerability IDs are short tokens like "GHSA-29mw-wpgm-hmr9", "CVE-2020-28500", "PYSEC-2021-1".
 const VULN_ID = /^[A-Za-z0-9][A-Za-z0-9._-]{0,79}$/;

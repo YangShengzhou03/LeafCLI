@@ -1,4 +1,4 @@
-﻿// Shared helpers for the Packagist (PHP / Composer) adapters.
+// Shared helpers for the Packagist (PHP / Composer) adapters.
 //
 // Hits the public, unauthenticated `packagist.org` JSON endpoints. Composer's
 // canonical package registry. Package names are `<vendor>/<package>`,
@@ -6,7 +6,7 @@
 import { ArgumentError, CommandExecutionError, EmptyResultError } from '@yangshengzhou/leafcli/errors';
 
 export const PACKAGIST_BASE = 'https://packagist.org';
-const UA = 'leafcli-packagist-adapter (+https://github.com/yangshengzhou/leafcli)';
+const UA = 'leafcli-packagist-adapter (+https://github.com/YangShengzhou03/LeafCLI)';
 
 // Each segment of a Composer package name (`vendor` and `package`).
 const SEGMENT = /^[a-z0-9]([_.-]?[a-z0-9]+)*$/;

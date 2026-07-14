@@ -1,4 +1,4 @@
-﻿// hf spaces — list top Hugging Face Spaces (gradio / streamlit / static demos).
+// hf spaces — list top Hugging Face Spaces (gradio / streamlit / static demos).
 //
 // Hits `https://huggingface.co/api/spaces?sort=…&full=true`. Mirrors the shape
 // of `hf models` / `hf datasets`. The Spaces API does not expose `trending` as
@@ -55,7 +55,7 @@ cli({
         let resp;
         try {
             resp = await fetch(url, {
-                headers: { Accept: 'application/json', 'User-Agent': 'leafcli/1.0 (+https://github.com/yangshengzhou/leafcli)' },
+                headers: { Accept: 'application/json', 'User-Agent': 'leafcli/1.0 (+https://github.com/YangShengzhou03/LeafCLI)' },
             });
         }
         catch (err) {

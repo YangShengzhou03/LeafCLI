@@ -1,4 +1,4 @@
-﻿// Shared helpers for the lichess.org public REST adapters.
+// Shared helpers for the lichess.org public REST adapters.
 //
 // Lichess exposes a generous unauthenticated API at `lichess.org/api`. We keep
 // the surface narrow: `user` (profile) + `top` (per-perf top-N leaderboard).
@@ -6,7 +6,7 @@
 import { ArgumentError, CommandExecutionError, EmptyResultError } from '@yangshengzhou/leafcli/errors';
 
 export const LICHESS_BASE = 'https://lichess.org';
-const UA = 'leafcli-lichess-adapter/1.0 (+https://github.com/yangshengzhou/leafcli; mailto:leafcli@example.com)';
+const UA = 'leafcli-lichess-adapter/1.0 (+https://github.com/YangShengzhou03/LeafCLI; mailto:leafcli@example.com)';
 
 // Lichess usernames are 2-30 chars: letters, digits, underscore, dash. Case-insensitive.
 const USERNAME_PATTERN = /^[A-Za-z0-9_-]{2,30}$/;

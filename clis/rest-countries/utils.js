@@ -1,4 +1,4 @@
-﻿// Shared helpers for the REST Countries adapter (https://restcountries.com).
+// Shared helpers for the REST Countries adapter (https://restcountries.com).
 //
 // REST Countries is a free public country-metadata API, no API key required.
 // We hit v3.1 only. The `fields=` query param is mandatory in v3.1 to keep
@@ -6,7 +6,7 @@
 import { ArgumentError, CommandExecutionError, EmptyResultError } from '@yangshengzhou/leafcli/errors';
 
 export const REST_COUNTRIES_BASE = 'https://restcountries.com/v3.1';
-const UA = 'leafcli-rest-countries-adapter/1.0 (+https://github.com/yangshengzhou/leafcli; mailto:leafcli@example.com)';
+const UA = 'leafcli-rest-countries-adapter/1.0 (+https://github.com/YangShengzhou03/LeafCLI; mailto:leafcli@example.com)';
 
 // REST Countries valid region values; subregions are validated server-side.
 export const REST_COUNTRIES_REGIONS = new Set(['africa', 'americas', 'asia', 'europe', 'oceania', 'antarctic']);

@@ -1,4 +1,4 @@
-﻿// Shared helpers for the IETF RFC adapter.
+// Shared helpers for the IETF RFC adapter.
 //
 // datatracker.ietf.org publishes a free, unauthenticated REST API. The
 // `/doc/<name>/doc.json` endpoint returns rich metadata for any IETF document
@@ -6,7 +6,7 @@
 import { ArgumentError, CommandExecutionError, EmptyResultError } from '@yangshengzhou/leafcli/errors';
 
 export const RFC_BASE = 'https://datatracker.ietf.org';
-const UA = 'leafcli-rfc-adapter (+https://github.com/yangshengzhou/leafcli)';
+const UA = 'leafcli-rfc-adapter (+https://github.com/YangShengzhou03/LeafCLI)';
 
 export function requireRfcNumber(value) {
     const raw = value;

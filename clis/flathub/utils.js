@@ -1,4 +1,4 @@
-﻿// Shared helpers for the Flathub adapters (https://flathub.org).
+// Shared helpers for the Flathub adapters (https://flathub.org).
 //
 // Flathub is the canonical Linux flatpak app registry. Public REST API at
 // `flathub.org/api/v2`, no auth, no key. Two endpoints we surface:
@@ -8,7 +8,7 @@ import { ArgumentError, CommandExecutionError, EmptyResultError } from '@yangshe
 
 export const FLATHUB_API_BASE = 'https://flathub.org/api/v2';
 export const FLATHUB_APP_BASE = 'https://flathub.org/apps';
-const UA = 'leafcli-flathub-adapter/1.0 (+https://github.com/yangshengzhou/leafcli; mailto:leafcli@example.com)';
+const UA = 'leafcli-flathub-adapter/1.0 (+https://github.com/YangShengzhou03/LeafCLI; mailto:leafcli@example.com)';
 
 // AppStream IDs are reverse-DNS (e.g. "org.gnome.Calculator"); the spec allows
 // letters, digits, `.`, `_`, `-`. Min two segments separated by `.`.
